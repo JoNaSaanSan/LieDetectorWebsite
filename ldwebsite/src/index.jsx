@@ -8,7 +8,6 @@ import Home from "./routes/Home";
 import Game from "./routes/Game";
 import About from "./routes/About";
 import './styles/index.scss';
-
 import { Link } from "react-router-dom";
 const rootElement = document.getElementById("root");
 render(

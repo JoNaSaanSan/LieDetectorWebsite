@@ -1,9 +1,9 @@
 import Webcam from "react-webcam";
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import useServer from "../hooks/useServer";
-import './styles/camera.scss';
+import './styles/liedetector.scss';
 
-const Camera = ({ setTol }) => {
+const LieDetector = ({ setTol }) => {
     const webcamRef = useRef(null);
     const mediaRecorderRef = useRef(null);
     const [capturing, setCapturing] = useState(false);
@@ -58,7 +58,7 @@ const Camera = ({ setTol }) => {
     return (
         <div className="container">
             {!video ? (<div className="content">
-                <Webcam audio={false} ref={webcamRef} height={360} width={480} className="webcam" />
+                <Webcam audio={false} ref={webcamRef} height={288} width={384} className="webcam" />
                 {!capturing ? (
 
                     <button className="button-49" role="button" onClick={handleStartCaptureClick}>Detect Lies</button>
@@ -72,4 +72,4 @@ const Camera = ({ setTol }) => {
     );
 }
 
-export default Camera;
+export default LieDetector;

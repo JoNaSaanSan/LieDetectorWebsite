@@ -1,5 +1,6 @@
 import '../styles/game.scss';
-import Camera from '../components/Camera';
+import Camera from '../components/LieDetector';
+import Cards from '../components/Cards';
 import React, { useState } from 'react';
 
 export default function Game() {
@@ -8,8 +9,10 @@ export default function Game() {
 
   return (
     <main>
-      <h2>Are You Lying?</h2>
+      <h2>Diese Karte hat die Farbe...</h2>  
+      <Cards></Cards>
       <Camera setTol={setTol}></Camera>
+
     </main>
   );
 }

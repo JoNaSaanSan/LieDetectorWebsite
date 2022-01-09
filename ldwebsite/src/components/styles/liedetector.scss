@@ -16,7 +16,7 @@ body {
 
 .textbox {
     background-color: $primary;
-    padding: 2rem;    
+    padding: 2rem;
     box-shadow: $primary 0px 3px 4px, $primary 0px 0px 0px 6px, $tertiary 16px 10px 0px 3px;
 }
 
@@ -30,7 +30,7 @@ body {
     width: 150px;
     height: 76px;
     line-height: 78px;
-    font-size: 20px;    
+    font-size: 20px;
     background: linear-gradient(45deg, transparent 5%, $primary 5%);
     border: 0;
     color: #fff;
@@ -58,11 +58,14 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
-    text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+    background: linear-gradient(45deg, transparent 3%, $secondary 3%, $secondary 5%, #ff013c 5%);
+    text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px $secondary;
     clip-path: var(--slice-0);
 }
-
+.button-49:hover {
+    background: linear-gradient(45deg, transparent 5%, $tertiary 5%);
+    box-shadow: 17px 6px 0px $primary;
+}
 .button-49:hover:after {
     animation: 1s glitch;
     animation-timing-function: steps(2, end);
