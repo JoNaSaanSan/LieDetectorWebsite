@@ -12,6 +12,10 @@ const LieDetector = ({ setTol }) => {
     const [isLoading, setLoading] = useState(false);
     const res = useServer(video);
 
+    const videoConstraints = {
+        facingMode: "user"
+    };
+
     const handleDataAvailable = useCallback(
         ({ data }) => {
             if (data.size > 0) {
@@ -58,15 +62,15 @@ const LieDetector = ({ setTol }) => {
     return (
         <div className="container">
             {!video ? (<div className="content">
-                <Webcam audio={false} ref={webcamRef} height={288} width={384} className="webcam" />
+                <Webcam audio={false} ref={webcamRef} videoConstraints={videoConstraints} height={288} width={384} className="webcam" />
                 {!capturing ? (
 
-                    <button className="button-49" role="button" onClick={handleStartCaptureClick}>Detect Lies</button>
+                    <button className="button-49" onClick={handleStartCaptureClick}>Detect Lies</button>
                 ) : (
-                    <button className="button-49" role="button" onClick={handleStopCaptureClick}>Stop!</button>
+                    <button className="button-49" onClick={handleStopCaptureClick}>Stop!</button>
                 )} </div>)
-                : (<div className="content"><div className="textbox">{res?.response?.text}</div>
-                    {!res?.loading ? (<button className="button-49" role="button" onClick={() => setVideo(null)}>Again!</button>) : (<div className="textbox">Loading...</div>)}
+                : (<div className="content">
+                    {!res?.loading ? (<><div className="textbox">{res?.response?.text}</div><button className="button-49" onClick={() => setVideo(null)}>Again!</button></>) : (<div className="textbox">Loading...</div>)}
                 </div>)}
         </div>
     );

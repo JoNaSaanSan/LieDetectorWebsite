@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles/cards.scss';
 
-const Cards = ({ }) => {
+const Cards = () => {
     const [color, setColor] = useState('');
     useEffect(() => {
         setColor("red")
