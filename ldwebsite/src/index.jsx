@@ -17,9 +17,9 @@ render(
         paddingBottom: "1rem",
       }}
     >
-      <Link to="/">Home</Link>
-      <Link to="/game">Game</Link>
-      <Link to="/about">About</Link>
+      <Link to="/">Start</Link>
+      <Link to="/game">Spiel</Link>
+      <Link to="/about">Information</Link>
     </nav>
     <Routes>
       <Route path="/" element={<Home />} />

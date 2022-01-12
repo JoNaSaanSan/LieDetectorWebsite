@@ -23,7 +23,7 @@ const Cards = () => {
         <main className="card-container">
             <div className="card-content">
                 <div className="card" onClick={() => pickCard()} style={{ backgroundColor: color, height: "120px", width: "75px" }}>
-                    Pick a Card
+                    Ziehe eine Karte
                 </div>
             </div>
         </main >

@@ -3,13 +3,13 @@ import Camera from '../components/LieDetector';
 import Cards from '../components/Cards';
 import React, { useState } from 'react';
 
-export default function Game() {
+export default function Spiel() {
   const [tol, setTol] = useState(false);
 
 
   return (
     <main>
-      <h2>Diese Karte hat die Farbe...</h2>  
+      <h2>Die Karte, die ich gezogen habe, hat die Farbe...</h2>  
       <Cards></Cards>
       <Camera setTol={setTol}></Camera>
 

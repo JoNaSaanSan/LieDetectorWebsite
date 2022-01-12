@@ -65,12 +65,12 @@ const LieDetector = ({ setTol }) => {
                 <Webcam audio={false} ref={webcamRef} videoConstraints={videoConstraints} height={288} width={384} className="webcam" />
                 {!capturing ? (
 
-                    <button className="button-49" onClick={handleStartCaptureClick}>Detect Lies</button>
+                    <button className="button-49" onClick={handleStartCaptureClick}>Los geht's!</button>
                 ) : (
-                    <button className="button-49" onClick={handleStopCaptureClick}>Stop!</button>
+                    <button className="button-49" onClick={handleStopCaptureClick}>Stopp!</button>
                 )} </div>)
                 : (<div className="content">
-                    {!res?.loading ? (<><div className="textbox">{res?.response?.text}</div><button className="button-49" onClick={() => setVideo(null)}>Again!</button></>) : (<div className="textbox">Loading...</div>)}
+                    {!res?.loading ? (<><div className="textbox">{res?.response?.text}</div><button className="button-49" onClick={() => setVideo(null)}>Nochmal</button></>) : (<div className="textbox">Loading...</div>)}
                 </div>)}
         </div>
     );

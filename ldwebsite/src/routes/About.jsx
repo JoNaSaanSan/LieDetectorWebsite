@@ -1,7 +1,7 @@
-export default function About() {
-    return (
-      <main>
-        <h2>About</h2>
-      </main>
-    );
-  }
+export default function Information() {
+  return (
+    <main>
+      <h3>Trinkspiel von Louisa, Hanna, Vivian und Jonathan</h3>
+    </main>
+  );
+}
