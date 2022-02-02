@@ -9,9 +9,12 @@ export default function Spiel() {
 
   return (
     <main>
-      <h2>Die Karte, die ich gezogen habe, hat die Farbe...</h2>  
       <Cards></Cards>
+      <p>Nun schaue in die Kamera, klicke auf "Aufzeichnen" und sage dem Computer was für eine Karte du gezogen hast.
+      </p>
+      <h2>Die Karte, die ich gezogen habe, ist...</h2>
       <Camera setTol={setTol}></Camera>
+      <h2>Hat dich der Computer richtig erwischt musst du die Aufgabe (falls vorhanden) ausführen.</h2>
 
     </main>
   );
